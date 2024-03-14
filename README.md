@@ -2,6 +2,136 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installation
+
+We need NPM and Node.js to download and install node library packages
+
+Step 1: Install NPM
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+Step 2: Activate NPM
+```bash
+source ~/.bashrc 
+```
+Step 3: Install lastest LTS version of Node.js
+```bash
+nvm install -lts 
+```
+Step 4: Check version of Node.js and NPM
+```bash
+node -v npm -v
+```
+
+## Start Project
+Step 1: Create a new React app
+```bash
+npx create-react-app my-app
+```
+Step 2: Navigate to your project directory
+```bash
+cd my-app
+```
+Step 3: Start the development server and open your default web browser with the URL **http://localhost:3000**
+```bash
+npm start
+```
+Step 4 (Optional): Create an optimized production build of your app  in the build directory when you're ready to deploy your React app
+```bash
+npm run build
+```
+
+## Folder Structure
+
+After creation, your project should look like this:
+
+> Note: public/index.html and src/index.js must exist with exact filenames.<br>
+> You can delete or rename the other files.<br>
+> You need to put any JS and CSS file inside src, otherwise Webpack won't see them.<br>
+
+```
+my-app/
+├── README.md
+├── node_modules
+├── package.json
+├── .gitignore
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src/
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+    └── setupTests.js
+```
+
+## How to Structure React Project?
+```
+my-app/
+│
+├── node_modules (.gitignore)
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── assets/
+│   │   ├── fonts/
+│   │   │   ├── MyFont.ttf
+│   │   ├── images/
+│   │   │   ├── MyImage.png
+│   │   ├── styles/
+│   │   │   ├── styles.css
+│   ├── components
+│   │   ├── Button.jsx
+│   │   ├── FormInput.jsx
+│   ├── config/
+│   │   ├── config.js
+│   ├── hooks
+│   │   ├── useFetch.js
+│   ├── context
+│   │   ├── AuthContext.js
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.jsx
+│   │   ├── About/
+│   │   │   ├── About.jsx
+│   ├── stores/
+│   │   │   ├── store.js
+│   ├── utils/
+│   │   │   ├── formatDate.js
+│   ├── App.css
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg
+│   ├── reportWebVitals.js
+│   └── setupTests.js
+├── .gitignore
+├── package-lock.json
+├── package.json
+└── README.md
+```
+* **public/ -** This directory contains files that will be publicly accessible.
+* **src/ -** This directory contains the source code of your React application.
+* **assets/ -** This directory contains static assets such as fonts, images, or stylesheets that are used within your application.
+* **components/ -** This directory contains reusable React components used throughout your application.
+* **config/ -** This directory contains configuration files or constants used within your application.
+* **hooks/ -** This directory contains custom React hooks used within your application.
+* **context/ -**  This directory contains React context providers used for managing global state within your application.
+* **pages/ -** This directory contains one folder for each page in your application.
+* **store/ -** This directory contains files related to state management using libraries like Redux.
+* **utils/ -** This directory contains utility functions or helper modules used within your application.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -44,27 +174,3 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
