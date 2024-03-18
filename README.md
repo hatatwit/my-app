@@ -85,29 +85,40 @@ my-app/
 ├── src/
 │   ├── assets/
 │   │   ├── fonts/
-│   │   │   ├── MyFont.ttf
+│   │   │   ├── myFont.ttf
 │   │   ├── images/
-│   │   │   ├── MyImage.png
+│   │   │   ├── myImage.png
 │   │   ├── styles/
 │   │   │   ├── styles.css
-│   ├── components
+│   ├── components/
 │   │   ├── Button.jsx
 │   │   ├── FormInput.jsx
-│   ├── config/
-│   │   ├── config.js
+│   ├── context/
+│   │   ├── AuthContext.js
+│   ├── data/
+│   │   ├── configValues.json
+│   │   ├── constants.js
+│   ├── features/
+│   │   ├── Authentication/
+│   │   │   ├── assets/
+│   │   │   ├── components/
+│   │   │   ├── Authentication.js
+│   │   ├── Order/
+│   │   │   ├── components/
+│   │   │   ├── hooks/
+│   │   │   ├── Order.js
 │   ├── hooks
 │   │   ├── useFetch.js
-│   ├── context
-│   │   ├── AuthContext.js
-│   ├── pages/
-│   │   ├── Home/
-│   │   │   ├── Home.jsx
-│   │   ├── About/
-│   │   │   ├── About.jsx
-│   ├── stores/
-│   │   │   ├── store.js
+│   │   ├── useLocalStorage.js
+│   ├── services/
+│   │   ├── api.js
+│   ├── store/
+│   │   ├── reducer.js
+│   │   ├── saga.js
+│   │   ├── store.js
 │   ├── utils/
 │   │   │   ├── formatDate.js
+│   │   │   ├── sessionStorage.js
 │   ├── App.css
 │   ├── App.js
 │   ├── App.test.js
@@ -121,16 +132,17 @@ my-app/
 ├── package.json
 └── README.md
 ```
-* **public/ -** This directory contains files that will be publicly accessible.
-* **src/ -** This directory contains the source code of your React application.
-* **assets/ -** This directory contains static assets such as fonts, images, or stylesheets that are used within your application.
-* **components/ -** This directory contains reusable React components used throughout your application.
-* **config/ -** This directory contains configuration files or constants used within your application.
-* **hooks/ -** This directory contains custom React hooks used within your application.
-* **context/ -**  This directory contains React context providers used for managing global state within your application.
-* **pages/ -** This directory contains one folder for each page in your application.
-* **store/ -** This directory contains files related to state management using libraries like Redux.
-* **utils/ -** This directory contains utility functions or helper modules used within your application.
+* **public/ -** Contains files that will be publicly accessible.
+* **src/ -** Contains the source code of your React application.
+* **assets/ -** Contains static assets such as fonts, images, or stylesheets that are used within your application.
+* **components/ -** Contains reusable React components used throughout your application.
+* **context/ -** Contains React context providers used for managing global state within your application.
+* **data/ -** Contains any constant data that doesn't change, like JSON files.
+* **features/ -** Contains a mini version of the source folder for each of your different features.
+* **hooks/ -** Contains custom React hooks used within your application.
+* **services/ -** Contains files to handle API interactions, including fetching and sending data to and from your backend.
+* **store/ -** Contains files related to state management using libraries like Redux, including reducers, actions, and middleware.
+* **utils/ -** Contains pure functions (e.g., functions that return the same output for the same input and don't have side effects) or helper modules used within your application. These utilities can include functions for data manipulation, formatting, or general-purpose tasks.
 
 ## Available Scripts
 
